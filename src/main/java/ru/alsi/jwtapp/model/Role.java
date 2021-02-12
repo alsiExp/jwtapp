@@ -1,13 +1,19 @@
 package ru.alsi.jwtapp.model;
 
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "roles")
-@Data
+@Getter
+@Setter
+@ToString(of = "name")
+@EqualsAndHashCode(of = "name")
 public class Role extends BaseEntity {
 
     @Column(name ="name")
